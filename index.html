@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<title>Daily routine</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- css -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="./style.css" rel="stylesheet" type="text/css" />
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="darkgrey">
+
+  <!-- page container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- grid -->
+    <div class="w3-row-padding">
+
+      <!-- left column -->
+      <div class="w3-third">
+        <div class="mediumgrey w3-card-4">
+          <div class="w3-display-container">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+            </div>
+          </div>
+          <div class="w3-container">
+            <br>
+
+            <!-- pomodoro -->
+            <br>
+            <center>
+              <div id="status"></div>
+            </center>
+
+            <div id="cpomodoro">
+              <center><img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/533-tomato.svg" style="width:200px; height:200px">
+                <figcaption>
+                  <div class="timerDisplay">25:00</div>
+                </figcaption>
+              </center>
+              <br><br><br>
+              <center>
+                <button id="start-btn" class="btn">START</button> <button id="reset" class="btn">RESET</button>
+              </center>
+            </div>
+
+            <br><br>
+            <div class="settingsbtn">
+              <div id="work">
+                <div>
+                  <h6><button class="btn-settings" id="work-plus">+</button> &nbsp; <span id="work-min"> 25</span> min &nbsp; <button class="btn-settings" id="work-minus">-</button> &nbsp; of focused work</h6>
+                </div>
+              </div>
+              <p>
+
+              <div id="break">
+                <div>
+                  <h6><button class="btn-settings" id="break-plus">+</button> &nbsp; <span id="break-min"> 5</span> min &nbsp; &nbsp; <button class="btn-settings" id="break-minus">-</button> &nbsp; breaks</h6>
+                </div>
+              </div>
+</p>
+            </div>
+            <br>
+            <hr>
+
+            <!-- google search -->
+            <div class="container">
+              <form action="https://www.google.com/search" method="get" target="_blank" id="search-form">
+                <input name="q" type="text" placeholder="Google" autocomplete="off" autofocus>
+              </form>
+              <br><br>
+            </div>
+
+            <hr>
+            <!-- navbar -->
+            <div class="sidenav">
+              <a href="https://twitter.com/">Twitter</a>
+              <a href="https://www.facebook.com/">Facebook</a>
+              <a href="https://www.instagram.com/">Instagram</a>
+              <a href="https://www.youtube.com">Youtube</a>
+              <a href="https://www.pinterest.com/">Pinterest</a>
+              
+            </div>
+            <hr>
+            <nav class="newlist">
+              <a href="https://www.linkedin.com/">LinkedIn</a>
+              <a href="https://github.com/">GitHub</a>
+            </nav>
+            <hr>
+
+            <!-- calendar -->
+            <div class="datepicker">
+            </div>
+
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <!-- right column -->
+      <div class="w3-twothird">
+
+        <div class="mediumgrey w3-container w3-card w3-margin-bottom">
+          <br>
+
+          <h2>
+            <center><span class="w3-tag matcha w3-round">My daily routine</span></center>
+          </h2>
+          <br>
+
+          <!-- to do list -->
+          <div id="myDIV" class="header">
+            <input type="text" id="myInput" placeholder="What am I gonna do today?">
+            <span onclick="newElement()" class="addBtn">➜</span>
+          </div>
+
+          <ul id="myUL">
+            <li>Cry in the shower (this is just an example, you can delete it)</li>
+          </ul>
+          <br>
+
+          <!-- weather (widget by tomorrow)-->
+          <h5 class="w3-code">
+
+            <div class="tomorrow" data-location-id="" data-language="EN" data-unit-system="METRIC" data-skin="light" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
+              <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+                <img alt="Powered by the Tomorrow.io Weather API" src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="250" height="18" />
+              </a>
+            </div>
+
+          </h5>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <footer class="matcha w3-container w3-center w3-margin-top">
+    <p>Powered by <a href="https://github.com/amayte" target="_blank">amayte</a></p>
+  </footer>
+
+  <!-- scripts -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
